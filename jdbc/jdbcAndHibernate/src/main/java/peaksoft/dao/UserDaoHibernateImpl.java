@@ -17,7 +17,7 @@ public class UserDaoHibernateImpl implements UserDao {
     public void createUsersTable() {
         Session session = Util.getSession().openSession();
         session.beginTransaction();
-        session.save(User.class);
+        session.persist(User.class);
         session.getTransaction().commit();
         session.close();
     }
